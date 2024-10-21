@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+int main(){
+
+  int count = 0;
+  int num;
+  char input[1];
+  int product = 1;
+
+  while (count < 7){
+
+    cout << "Enter a number: " << endl;
+    cin >> num;
+
+    if(num != 3 && num != 5){
+      product *= num;
+    }
+
+    count++;
+  }
+  return 0;
+}

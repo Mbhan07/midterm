@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+//read in two integers from the user and output the sum
+//do this five times or until the user quits
+
+int main(){
+
+  int num1;
+  int num2;
+  int sum;
+  int count = 0;
+  char input[1];
+
+  cout << "Enter your first number: ";
+  cin >> num1;
+
+  cout << "Enter your second number: ";
+  cin >> num2;
+
+  sum = num1 + num2;
+
+  while(count < 5){
+    cout << "I am going to print the sum five times, unless you choose to exit." << endl;
+    cout << "Sum: " << sum << endl << "Would you like to exit? (y/n)" << endl;
+    cin.get(input, 1);
+    cin.get();
+
+    if(strcmp(input, "y") == 0){
+      cout << "Thanks!" << endl;
+      exit(0);
+    }else if(strcmp(input, "n") == 0){
+      cout << "Okay, continuing on!" << endl;
+      cout << "Sum: " << sum << endl;
+    }else{
+      cout <<"That is not a valid input. Please enter 'y' or 'n'" << endl;
+    }
+
+    if (count == 5){
+      exit(0);
+    }
+  }
+
+  return 0;
+}
